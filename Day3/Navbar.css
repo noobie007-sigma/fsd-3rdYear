@@ -1,0 +1,13 @@
+.heading {
+    background-color: aqua;
+    font-size: 12px;
+}
+#heading1 {
+    color: red;
+}
+#heading2 {
+    color: green;
+}
+div > p {
+    background-color: aquamarine;
+}
