@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: black;
+    color: wheat;
+}
+.navbar {
+    display: flex;
+    background-color: black;
+    font-size: 20px;
+    justify-content: space-between;
+    /* margin: 20px; */
+}
+.menubar, .login {
+    display: flex;
+    align-items: center;
+}
+.menu-items {
+    border: 3px solid green;
+    border-radius: 12px;
+    font-size: 40px;
+    background-color: blueviolet;
+    color: beige;
+    margin: 20px;
+}
+.lgn, .sgn {
+    border: 3px solid green;
+    border-radius: 12px;
+    font-size: 40px;
+    background-color: black;
+    color: beige;
+    margin: 20px;
+}
+a {
+    text-decoration: none ;
+}
+a:hover {
+    background-color: chartreuse;
+    color: black;
+
+}
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    /* height: 200px; */
+    background-color: chocolate;
+    border: 5px solid greenyellow;
+}
+.about-website {
+    width: 40%;
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+}
+.news {
+    width: 30%;
+}
+.login-panel {
+    width: 30%;
+    text-align: center;
+}
+table {
+    font-size: 30px;
+    border: 10px solid gold;
+    border-radius: 10px;
+}
+.footer, .copyright {
+    width: 100%;
+    margin: 40px;
+    background-color: black;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
