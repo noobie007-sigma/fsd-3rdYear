@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Users Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top News</h1>
+    <button onclick="fetchData()">GET NEWS</button>
+    <table id="newsTable">
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>URL</th>
+            </tr>
+
+    </table>
+
+    <script>
+        async function fetchData() {
+            try {
+                let response = await fetch("https://saurav.tech/NewsAPI/top-headlines/category/health/in.json");
+                let data = await response.json();
+                
+                const table = document.getElementById('newsTable')
+
+                data.articles.forEach(news => {
+                    const row = document.createElement('tr')
+
+                    const title = document.createElement('td')
+                    title.textContent = news.title;
+                
+                    row.appendChild(title)
+
+                    const description = document.createElement('td')
+                    description.textContent = news.description
+                    row.appendChild(description)
+
+                    const link = document.createElement('a')
+                    link.href = news.url;
+                    link.textContent = "View Page"
+                    link.target = '_blank'
+
+                    row.appendChild(link)
+
+                    table.appendChild(row)
+
+                })
+            } catch(error) {
+                console.error("Error fetching data: ", error);
+                document.body.innerHTML += `<p style="color: red;">Error fetching data. Please check the console for details.</p>`;
+            }
+        }
+
+        // fetchData();
+    </script>
+</body>
+</html>
