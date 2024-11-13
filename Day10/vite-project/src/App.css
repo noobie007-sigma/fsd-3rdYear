@@ -4,3 +4,14 @@ h1 {
   font-size: 30px;
   border: 10px solid green;
 }
+#disp {
+  background-color: greenyellow;
+  font-size: 20px;
+  border: 10px;
+}
+h2 {
+  background-color: blueviolet;
+  color: wheat;
+  font-size: 15px;
+  border-radius: 10px;
+}

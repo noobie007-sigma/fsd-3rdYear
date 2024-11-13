@@ -1,9 +1,16 @@
 import React from 'react'
 import "./App.css";
 
-const App = () => {
+const App = ({name, email, roll}) => {
   return (
-    <div><h1>App</h1></div>
+    <div id="disp">
+      <h1>Student Details</h1>
+      <h2>Name: {name}</h2>
+      <h2>Email Id: {email}</h2>
+      <h2>RollNo.: {roll}</h2>
+    
+    
+    </div>
   )
 }
 
