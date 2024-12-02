@@ -1,8 +1,11 @@
 import React from 'react'
+import ImageApp from './components/ImageApp'
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <ImageApp />
+    </>
   )
 }
 
